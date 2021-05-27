@@ -1,0 +1,16 @@
+resources:
+- ../../base
+patchesJson6902:
+  - target:
+      version: v1
+      group: apps
+      kind: Deployment
+      name: frankamente
+    path: deployment.yaml
+  - target:
+      version: v1
+      group: route.openshift.io
+      kind: Route
+      name: frankamente
+      namespace: frankamente
+    path: route.yaml

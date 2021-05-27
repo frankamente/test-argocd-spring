@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: frankamente
+  name: frankamente
+  namespace: frankamente
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frankamente
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: frankamente
+    spec:
+      containers:
+      - image: docker pull frankamente/frankamente:test-argocd
+        name: frankamente
+        env:
+        - name: GREETING
+          value: "PATCH_ME"
+        resources: {}
+...

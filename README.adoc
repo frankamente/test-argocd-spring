@@ -1,0 +1,5 @@
+= Project to test ArgoCD Deploys
+
+Is simple, when receive a GET request to the server url, it checks if have or haven't the GREETING environment variable and use it or use a default message.
+
+It will be used to make ArgoCD test in multi-cluster.
