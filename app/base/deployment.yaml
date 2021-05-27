@@ -20,7 +20,7 @@ spec:
         app: frankamente
     spec:
       containers:
-      - image: docker pull frankamente/frankamente:test-argocd
+      - image: frankamente/frankamente:test-argocd
         name: frankamente
         env:
         - name: GREETING
